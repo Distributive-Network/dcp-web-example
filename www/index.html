@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- @file      index.html
+  --
+  -- DCP ....
+  -- 
+  -- @author Nazila Akhavan, nazila@kingsds.network
+  -- @date   April 2020
+  --
+  -->
+<head>
+  <meta charset="utf-8">
+  <script src="http://scheduler.nazila.office.kingsds.network/dcp-client/dcp-client.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./index.css">
+  <script src= "../src/index.js"></script>
+  
+</head>
+<body>
+  <div class="container">
+    <h2>Perfect Triangular numbers </h2>
+    <p>Triangular numbers, as shown in the image here, are a pattern of numbers that form equilateral triangles.
+    Each subsequent number in the sequence adds a new row of dots to the triangle.</p>
+    <div class='picture'>
+      <img src="triangular-numbers.png" style="width:550px;height:250px;">
+    </div>
+    <p>
+    A perfect number is a positive integer that is equal to the sum of its positive divisors, excluding the number itself.
+    For instance, 6 has divisors 1, 2, and 3 (excluding itself), and 1 + 2 + 3 = 6, so 6 is a perfect number. 
+    </p>
+    <p>
+    Then the first perfect triangle number is 6. This application finds all of the perfect triangle numbers in a given interval [1, b].
+    </p>
+  </div>
+  <div class='row'>
+    <div class="container"> 
+      <h3 id="label" for="slider">Choose the search interval</h3>
+      <div class="col-sm-9">
+        <div class="slider">
+          <input type="range" id="slider"></input>
+          <output id="bubble" for="slider" onforminput="value = slider.valueAsNumber;"></output>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <button class="compute-btn" id="compute-button">Compute</button>
+        <button class="compute-btn" id="cancel-button">Cancel</button>
+      </div>
+    </div> 
+  </div>
+  <div class="container">
+    <div class="progress">
+      <div id="progress" class="progress-bar progress-bar-danger" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+  </div>
+  <div class="container">    
+    <div class="picture">
+      <div id="divPlot" class="graph-container"></div>
+    </div>
+  </div>
+</body>
+</html>
