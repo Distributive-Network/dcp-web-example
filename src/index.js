@@ -7,7 +7,6 @@
  */
 const maxRange = 100000
 const deployJob = async function () {
-  let plot = document.createElement("div");
   let divPlot = document.getElementById('divPlot');
   let inputValue =  document.getElementById('slider').value;
   let computBtn = document.getElementById('compute-button');
@@ -16,6 +15,7 @@ const deployJob = async function () {
 
   computBtn.style.backgroundColor = '#e4e4e4';
   computBtn.innerHTML = 'running';
+  computBtn.disabled = true;
   cancelBtn.style.backgroundColor = '#3da664d9';
   inputValue = Number(inputValue);
   while(divPlot.firstChild){
@@ -25,7 +25,6 @@ const deployJob = async function () {
 
   cancelBtn.onclick = async () => {
     job.cancel();
-    console.log(job.id);
     computBtn.innerHTML = 'Compute';
     computBtn.style.backgroundColor = '#3da664d9';
     cancelBtn.style.backgroundColor = '#e4e4e4';
@@ -120,21 +119,20 @@ const deployJob = async function () {
   });
   job.on('result', (ev) => {
     if(ev.result) {
-      noResult = false;   
+      noResult = false; 
+      let plot = document.createElement("div");  
       plot.className = 'plot-style';
       plot.setAttribute("id", `plot-${ev.result[0]}`);                                        
-      document.getElementById("divPlot").appendChild(plot);    
+      divPlot.appendChild(plot);    
       plot2D(...ev.result);
     }
   });
 
-  job.on('complete', async function(res) {
-    await job.results.fetch();
-    res = job.results.values();
-    console.log('onComplete', res);
-    computBtn.innerHTML = 'Compute';
+  job.on('complete', async function() {
     computBtn.style.backgroundColor = '#3da664d9';
     cancelBtn.style.backgroundColor = '#e4e4e4';
+    computBtn.innerHTML = 'Compute';
+    computBtn.disabled = false;
   });
 
   await job.exec(dcp.compute.marketValue);
