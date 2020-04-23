@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .heavy { font: bold 22px sans-serif; }
+    .t1 { fill: blue; }
+    .t2 { fill: red; }
+    .t3 { fill: green; }
+  </style>
+   <g transform="translate(1,45)">
+      <circle class="t1" cx="10" cy="10" r="10"/>
+      <circle class="t2" cx="35" cy="10" r="10"/>
+      <circle class="t2" cx="23" cy="-13" r="10"/>
+      <circle class="t3" cx="60" cy="10" r="10"/>
+      <circle class="t3" cx="48" cy="-13" r="10"/>
+      <circle class="t3" cx="35" cy="-35" r="10"/>
+   </g>
+</svg>

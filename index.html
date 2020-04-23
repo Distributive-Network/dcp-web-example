@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 
+    -- DCP Minimal Web Exemplar - A minimal demostration of using the DCP network to calculate triangular numbers.
+    -- @author Nazila Akhavan, nazila@kingsds.network
+    -- @date   April 2020
+  -->
+  <title>DCP Example - Triangular Numbers</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script src="https://scheduler.distributed.computer/dcp-client/dcp-client.js"></script>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <script src= "index.js"></script>
+</head>
+<body>
+  <section>
+    <h1>Triangular Numbers</h1>
+    <p>
+      A triangular number gives the number of objects arranged in an equilateral triangle. To illustrate here are the first 4 triangular numbers.
+    </p>
+    <img id="illustration"src="triangular-numbers.svg">
+    <p>
+      This application finds all of the triangular numbers in a given interval [a, b]. After choosing the search interval press Compute and the job will be sent to the DCP network.
+    </p>
+  </section>
+  <section class="horizontal">
+    <label for="inputA">a:</label>
+    <input id="inputA" type="number" min="1" step="1" value="1">
+    <label for="inputB">b:</label>
+    <input id="inputB" type="number" min="1" step="1" value="30">
+    <button id="compute-button">Compute</button> 
+  </section>
+  <section>
+    <div id="status"></div>
+    <div id="progress-container" hidden>
+      <div id="progressbar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <div id="resultsMsg" hidden>Triangular numbers found so far: <span id="results">none</span></div>
+  </section>
+</body>
+</html>

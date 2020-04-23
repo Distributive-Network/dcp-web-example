@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg viewBox="0 0 410 140" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <style>
+    .heavy { font: bold 22px sans-serif; }
+    #t1 { fill: blue; }
+    #t2 circle { fill: red; }
+    #t3 circle { fill: green; }
+    #t4 circle { fill: orange; }
+  </style>
+   <g transform="translate(4, 70)" >
+      <circle cx="10" cy="10" r="10" id="t1"/>
+   </g>
+   <text x="8" y="130" class="heavy">1</text>
+   
+   <g transform="translate(80, 70)">
+      <g id="t2" transform="translate(0,00)">
+         <use xlink:href="#t1"/>
+         <circle cx="35" cy="10" r="10"/>
+         <circle cx="23" cy="-13" r="10"/>
+      </g>
+   </g>
+   <text x="97" y="130" class="heavy">3</text>
+   
+   <g transform="translate(180, 70)">
+      <g id="t3" transform="translate(0,0)">
+         <use xlink:href="#t2"/>
+         <circle cx="60" cy="10" r="10"/>
+         <circle cx="48" cy="-13" r="10"/>
+         <circle cx="35" cy="-35" r="10"/>
+      </g>
+   </g>
+   <text x="210" y="130" class="heavy">6</text>
+   
+   <g transform="translate(310, 70)">
+      <g id="t4" transform="translate(0,0)">
+         <use xlink:href="#t3"/>
+         <circle cx="85" cy="10" r="10"/>
+         <circle cx="73" cy="-13" r="10"/>
+         <circle cx="60" cy="-35" r="10"/>
+         <circle cx="48" cy="-57" r="10"/>
+      </g>
+   </g>
+   <text x="345" y="130" class="heavy">10</text>
+</svg>
