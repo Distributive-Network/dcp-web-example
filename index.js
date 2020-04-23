@@ -44,7 +44,6 @@ function deployJob () {
     let sum = 0;
     for (let i = 1; i <= number; i++) {
       sum += i;
-      console.log(sum);
       if(sum === number) {
         return number;
       } else if ( sum > number) {
@@ -69,11 +68,7 @@ function deployJob () {
   });
   job.on('result', logResult);
   job.on('complete', () => computeBtn.disabled = false);
-  try {
-    job.exec(dcp.compute.marketValue);
-  } catch (error) {
-    alert(error);
-  }
+  job.exec().catch( (error) => alert(error));
 }
 
 function setStatus (newStatus) {
