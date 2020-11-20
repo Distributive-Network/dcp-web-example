@@ -1,6 +1,6 @@
 # dcp-web-example
 
-A sample web application showing how to deploy a DCP job.
+A sample web application showing how to deploy a job using the Distributed Computer.
 
 ## Background: Perfect Triangle Numbers
 
@@ -17,27 +17,27 @@ distributed processing.
 
 ## How to start
 
-DCP can be used in computations in which many calculations or the execution of
+The Distributed Computer can be used in computations in which many calculations or the execution of
 processes are carried out simultaneously. Large problems can often be divided
-into smaller ones, which can then be solved at the same time and parallel.
+into smaller ones, which can then be solved at the same time and in parallel.
 
-The first step is to sign up at
-[Distributed Compute portal](https://portal.distributed.computer/) and create a
-_keystore_ at **Accounts** tab. This keystore allows you to deploy jobs by using
-Distributed Compute Credits or DCC. It is considered as a bank account and DCCs
-can be transferred from and into the keystore.
+The first step is to sign up for the beta program to use the Distributed Computer called [First Developers](https://docs.google.com/forms/d/e/1FAIpQLScj6g1PH7Nbejlj5XHrScvtBhTy-2A_l0A8sHMzzihQR79KYw/viewform) (or "First Devs").
+When you have done this, follow the email instructions to arrive at the [Getting Started](https://docs.dcp.dev/getting-started) guide, where we have more
+information on how to begin. You will need a pair of API keys called a 'Bank Keystore' and an 'ID Keystore' to deploy jobs. As is described in the 
+documentation, your Bank Keystore is similar to a 'bank account' where you hold a certain amount of credits that
+are transferred from you to the owner of the compute hardware when tasks are completed.
 
-You can earn DDC by starting mining at **Worker** tab and when the work is
-completed, credits are transferred to your keystore account. You can see the
-balance of your account by clicking on the refresh button at keystore. There are
-some more options on the drawer navigation like download that let you download
-the keystore file. In the web application you need to upload it in order to
+Every First Dev will be given free credits. You can also earn them by completing computations for 
+other users on the Distributed Computers in the **Worker** tab of our [portal](https://portal.distributed.computer/). You can see the
+balance of your account by clicking on the refresh button next to 'Balance'. There are
+some more options like 'Download' that let you download
+the Bank Keystore file. In this web application, you will need to upload it in order to
 deploy jobs.
 
 ## index.html
 
-To accessing DCP all you need is dcp-client, our client API for accessing the
-distributed computer.
+To access the Distributed Computer all you need is dcp-client, our client API for accessing the
+Distributed Computer.
 
 ```html
 <script src="https://scheduler.distributed.computer/dcp-client/dcp-client.js"></script>
@@ -48,5 +48,7 @@ distributed computer.
 Jobs can be created with the `compute.for` method. The arguments to this method
 determines how many slices the job will have and what data each slice should be
 executed with. Please visit
-[DCP Developer Guide](https://gitlab.com/Distributed-Compute-Protocol/dcp-docs/-/blob/master/dcp-developer-guide.md)
-for comprehensive information.
+our [Developer Guide](https://docs.dcp.dev/guides/developer-guide.html)
+for more comprehensive information.
+
+Happy coding!
