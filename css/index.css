@@ -23,18 +23,17 @@ section {
 }
 
 #progress-container {
-	background-color: #ccc;
-	border-radius: 10px;	
-	height: 15px;
-	overflow: hidden;
+  background-color: #ccc;
+  border-radius: 10px;
+  height: 15px;
+  overflow: hidden;
   margin-bottom: 15px;
   min-width: 250px;
   width: 100%;
 }
 
 #progressbar {
-	height: 100%;
-	width: 0%;
-  float: left;
-  background-color:#F60;
+  height: 100%;
+  width: 0%;
+  background-color: #f60;
 }
