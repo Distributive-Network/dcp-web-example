@@ -2,7 +2,11 @@
 
 A sample web application showing how to deploy a job using the Distributed Computer.
 
-## Background: Perfect Triangle Numbers
+This application finds all of the triangular numbers in a given interval
+`[1, b]`. This brief tutorial will introduce you to the semantics behind
+distributed processing.
+
+## Background: Triangular Numbers
 
 Triangular numbers are a pattern of numbers that form equilateral triangles.
 Each subsequent number in the sequence adds a new row of dots to the triangle.
@@ -10,10 +14,6 @@ Each subsequent number in the sequence adds a new row of dots to the triangle.
 A perfect number is a positive integer that is equal to the sum of its positive
 divisors, excluding the number itself. For instance, 6 has divisors 1, 2, and 3
 (excluding itself), and 1 + 2 + 3 = 6, so 6 is a perfect number.
-
-This application finds all of the perfect triangle numbers in a given interval
-`[1, b]`. This brief tutorial will introduce you to the semantics behind
-distributed processing.
 
 ## How to start
 
