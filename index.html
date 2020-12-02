@@ -7,27 +7,23 @@
     <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <!-- Loads dcp-client into the `window.dcp` object -->
-    <script
-      src="https://scheduler.distributed.computer/dcp-client/dcp-client.js"
-    ></script>
+    <script src="https://scheduler.distributed.computer/dcp-client/dcp-client.js"></script>
     <script src="js/index.js" defer></script>
   </head>
   <body>
-    <section>
+    <main>
       <h1>Triangular Numbers</h1>
       <p>
         A triangular number gives the number of objects arranged in an
         equilateral triangle. To illustrate here are the first 4 triangular
         numbers.
       </p>
-      <img id="illustration" src="img/triangular-numbers.svg" />
+      <img id="illustration" src="img/triangular-numbers.svg" alt="" />
       <p>
         This application finds all of the triangular numbers in a given interval
         [a, b]. After choosing the search interval press Compute and the job
         will be sent to the DCP network.
       </p>
-    </section>
-    <section>
       <div class="input-group">
         <label for="inputA">a:</label>
         <input id="inputA" type="number" min="1" step="1" value="1" />
@@ -37,8 +33,6 @@
         <input id="inputB" type="number" min="1" step="1" value="30" />
       </div>
       <button id="compute-button">Compute</button>
-    </section>
-    <section>
       <div id="status"></div>
       <div id="progress-container" hidden>
         <div
@@ -51,6 +45,6 @@
       <div id="resultsMsg" hidden>
         Triangular numbers found so far: <span id="results">none</span>
       </div>
-    </section>
+    </main>
   </body>
 </html>
