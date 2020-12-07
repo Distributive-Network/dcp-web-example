@@ -68,9 +68,9 @@ async function deployJob() {
   });
 
   try {
-    // await job.exec();
+    await job.exec();
     // OR
-    await job.localExec();
+    // await job.localExec();
   } catch (error) {
     alert(error);
   }
