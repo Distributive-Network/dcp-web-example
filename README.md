@@ -51,4 +51,8 @@ executed with. Please visit
 our [Developer Guide](https://docs.dcp.dev/guides/developer-guide.html)
 for more comprehensive information.
 
+## Preview
+
+A preview of the website using GitHub Pages is live at https://kings-distributed-systems.github.io/dcp-web-example/.
+
 Happy coding!
